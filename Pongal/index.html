@@ -39,7 +39,6 @@ time	{font-size:40px;color:red;position: absolute;right: 70px;bottom: 550px;text
 <input type="image" src="submit_button.gif" alt="Submit">
 </form>
 </center>
-</body>
 <script>
 var final_date=new Date("Jan 14,2021 06:00:00").getTime();
 var x=setInterval(function() {
@@ -98,4 +97,11 @@ function sun() {
   setTimeout(sun, 600);
 }
 </script>
+<audio id="danuku_sound" src="danuku_rutuku[1].mp3" autostart="true"></audio>
+<script>
+var sound = document.getElementById("danuku_sound");
+sound.play()
+}
+    </script>
+</body>
 </html>
