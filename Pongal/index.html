@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<title>பொங்கல் கொண்டாட்டம்</title>
+<head>
+</br><b><h1>பொங்கல் கொண்டாட்டம்</h1><b></br>
+</head>
+<style>
+h1	{font-size: 60px;color: orange;text-align: center;}
+body	{background-color: lightyellow;}
+.ads	{display: block;margin-left: auto;
+margin-right: auto;width: 450;height: 250;text-align: center;color: grey;}
+.pongal	{position: absolute;left: 0px;top: 425px;z-index: -1;width: 950;height: 1208;}
+.sugar	{position: absolute;left: -50px;top: 600px;z-index: -2;width: 784;height: 784;display:none;}
+.danuku	{position: absolute;right: 80px;bottom: 550px;z-index: -1;}
+.sun	{position: absolute;left: -50px;top: 200px;display:none;z-index: -1;}
+.click	{position: absolute;right: 50px;bottom: 550px;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+h2	{font-size: 60px;color: red;text-align: center;text-shadow: 2px 2px 5px red;}
+h3	{font-size: 70px;color: blue;text-align: center;}
+input[type="text"]	{width:65%;height:80px;border-radius:100px;background-color: orange;margin-left:2px;position:relative;top:590px;font-size:35px;}
+input[type="image"]	{width:70;height:70;position:relative;top:610px;}
+time	{font-size:40px;color:red;position: absolute;right: 55px;bottom: 500px;text-shadow: 2px 2px 5px red;}
+</style>
+<body>
+<a href="ads_center.html"><img src="ads_poster.jpg" class="ads"></a>
+<h2 id="name">தமிழன்</h2>
+<h3>இனிய</br> பொங்கல்</br> நல்வாழ்துக்கள்</h3>
+<center><time id="date"></time></center>
+<center><img src="pongal.png" class="pongal"></center>
+<img src="sugar0.png" class="sugar" width="784" height="784">
+<img src="sugar1.png" class="sugar" width="784" height="784">
+<img src="danuku0.png" class="danuku" width="86" height="218">
+<img src="danuku1.png" class="danuku" width="96" height="228">
+<img src="danuku2.png" class="danuku"  width="106" height="238">
+<img src="sun0.png" class="sun" width="200" height="200">
+<img src="sun1.png" class="sun" width="300" height="300">
+<img src="sun2.png" class="sun"  width="400" height="400">
+<img src="click.png" class="click" onclick="hide();" width="200" heigth="200">
+  <!--<img src="click.png" class="click" onclick="hide();" width="250" heigth="250">-->
+<audio id="myAudio">
+  <source src="danuku_ratuku.mp3" type="audio/mpeg">
+</audio>
+<center>
+<form action="new.html" method="get" target="_blank">
+<input type="text" id="name" name="n" placeholder="உங்கள் பெயரை எழுதுக...">
+<input type="image" src="submit_button.gif" alt="Submit">
+</form>
+</center>
+<script>
+var final_date=new Date("Jan 14,2021 06:00:00").getTime();
+var x=setInterval(function() {
+	var now=new Date().getTime();
+	var count=final_date-now;
+	var days = Math.floor(count / (1000 * 60 * 60 * 24));
+   var hours = Math.floor((count % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   var minutes = Math.floor((count % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((count % (1000 * 60)) / 1000);
+  document.getElementById("date").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("date").innerHTML = "கொண்டாட்டம் ஆரம்பம்";
+  }
+}, 1000);
+</script>
+<script>
+var name0=decodeURIComponent(window.location.search);
+name1=name0.substring(1);
+//var name2=name1.indexOf("&x=");
+var name3=name1.slice(2);
+document.getElementById("name").innerHTML=name3+' \'s';
+</script>
+<script>
+var index0=0;
+var index1=0;
+var index2=0;
+var index3=0;
+var stopdata;
+sugar();
+hide_danuku();
+//danuku();
+sun();
+//click();
+function sugar() {
+  var i;
+  var x = document.getElementsByClassName("sugar");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";  
+  }
+  index0++;
+  if (index0 > x.length) {index0 = 1}    
+  x[index0-1].style.display = "block";  
+  setTimeout(sugar, 1000);
+}
+function danuku() {
+  var j;
+  var y = document.getElementsByClassName("danuku");
+  for (j = 0; j < y.length; j++) {
+  y[j].style.display = "none";  
+  }
+  index1++;
+  if (index1 > y.length) {index1 = 1}    
+  y[index1-1].style.display = "block";  
+  setTimeout(danuku, 600);
+}
+function hide_danuku() {
+	var v = document.		getElementsByClassName("danuku");
+  for (l = 0; l < v.length; l++) {
+  v[l].style.display = "none";  
+  }
+}
+function sun() {
+  var k;
+  var z = document.getElementsByClassName("sun");
+  for (k = 0; k < z.length; k++) {
+  z[k].style.display = "none";  
+  }
+  index2++;
+  if (index2 > z.length) {index2 = 1}    
+  z[index2-1].style.display = "block";  
+  setTimeout(sun, 600);
+}
+function click() {
+  var ij;
+  var xy = document.getElementsByClassName("click");
+  for (ij = 0; ij < xy.length; ij++) {
+  xy[ij].style.display = "none";  
+  }
+  index3++;
+  if (index3 > xy.length) {index3 = 1}    
+  xy[index3-1].style.display = "block";  
+  stopdata=setTimeout(click, 500);
+}
+function playAudio() { 
+	var sound = document.getElementById("myAudio"); 
+	sound.play(); 
+}
+function hide() {
+	var l;
+	clearTimeout(stopdata);
+	danuku();
+	playAudio();
+	var v = document.		getElementsByClassName("click");
+  for (l = 0; l < v.length; l++) {
+  v[l].style.display = "none";  
+  }
+}
+</script>
+<script>
+</script>
+</body>
+</html>
