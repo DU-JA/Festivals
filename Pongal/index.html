@@ -27,6 +27,41 @@ h3	{font-size: 70px;color: blue;text-align: center;}
 input[type="text"]	{width:65%;height:80px;border-radius:100px;background-color: orange;color: red;margin-left:2px;position:fixed;bottom: 20px;left: 123px;font-size:35px;-webkit-animation-name: spaceboots;-webkit-animation-duration: 0.8s;-webkit-transform-origin: 50% 50%;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear;}
 input[type="image"]	{width:70;height:70;position:fixed;bottom:20px;right: 123px;-webkit-animation-name: spaceboots;-webkit-animation-duration: 0.8s;-webkit-transform-origin: 50% 50%;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear;}
 time	{font-size:40px;color:red;position: absolute;right: 55px;bottom: 500px;text-shadow: 2px 2px 5px red;}
+@-webkit-keyframes spaceboots {
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
 </style>
 <body>
 <a href="ads_center.html"><img src="ads_poster.jpg" class="ads"></a>
