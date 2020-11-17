@@ -7,7 +7,7 @@
 <style>
 h1	{font-size: 60px;color: orange;text-align: center;}
 body	{background-color: lightyellow;}
-.ads	{display: block;margin-left: auto;margin-right: auto;width: 450;height: 250;text-align: center;color: grey;opacity: 1;}
+.ads	{display: block;margin-left: auto;margin-right: auto;width: 450;height: 250;text-align: center;color: grey;}
 .pongal	{position: absolute;left: 0px;top: 425px;z-index: -1;width: 950;height: 1208;}
 .sugar	{position: absolute;left: -50px;top: 600px;z-index: -2;width: 784;height: 784;display:none;}
 .danuku	{position: absolute;right: 80px;bottom: 550px;z-index: -1;}
@@ -64,7 +64,7 @@ time	{font-size:40px;color:red;position: absolute;right: 55px;bottom: 500px;text
 .sidenav {height: 70%;width: 0;position: fixed;z-index: 1;top: 0;right: 0;background-color: white;opacity: 0.6;overflow-x: hidden;transition: 0.5s;padding-top: 60px;}
 .sidenav a {padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181;display: block;transition: 0.3s;}
 .sidenav a:hover {color: #f1f1f1;}
-.sidenav .closebtn {position: absolute;top: 0;right: 70%;font-size: 75px;margin-left: 50px;color: red;}
+.sidenav .closebtn {position: absolute;top: 0;right: 80%;font-size: 100px;margin-left: 50px;color: red;}
 </style>
 <body>
 <a href="ads_center.html"><img src="ads_poster.jpg" class="ads"></a>
@@ -92,9 +92,9 @@ time	{font-size:40px;color:red;position: absolute;right: 55px;bottom: 500px;text
 </form>
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<a href="ads_center.html"><img src="ads_poster.jpg" class="ads"></a>
+<a href="ads_center.html"><img src="ads_poster.jpg" style="position:absolute;top:25%;opacity: 1;" class="ads"></a>
 </div>
-<span style="font-size:75px;color: red;cursor:pointer;position: absolute;top :80px;right: 20px;" onclick="openNav()">&#9776;</span>
+<span style="font-size:75px;color: red;cursor:pointer;position: absolute;top :100px;right: 20px;" onclick="openNav()">&#9776;</span>
 </center>
 <script>
 var final_date=new Date("Jan 14,2021 05:30:00").getTime();
