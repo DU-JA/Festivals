@@ -7,14 +7,14 @@
 <style>
 h1	{font-size: 60px;color: orange;text-align: center;}
 body	{background-color: lightyellow;}
-.ads	{display: block;margin-left: auto;
-margin-right: auto;width: 450;height: 250;text-align: center;color: grey;}
+.ads	{display: block;margin-left: auto;margin-right: auto;width: 450;height: 250;text-align: center;color: grey;}
 .pongal	{position: absolute;left: 0px;top: 425px;z-index: -1;width: 950;height: 1208;}
 .sugar	{position: absolute;left: -50px;top: 600px;z-index: -2;width: 784;height: 784;display:none;}
 .danuku	{position: absolute;right: 80px;bottom: 550px;z-index: -1;}
 .sun	{position: absolute;left: -50px;top: 200px;display:none;z-index: -1;}
 .click	{position: absolute;right: 50px;bottom: 550px;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
-@-webkit-keyframes spin {
+	//spining image starts
+@-webkit-keyframes spin {	
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
 }
@@ -22,11 +22,13 @@ margin-right: auto;width: 450;height: 250;text-align: center;color: grey;}
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+	//spining imagr ends
 h2	{font-size: 60px;color: red;text-align: center;text-shadow: 2px 2px 5px red;}
 h3	{font-size: 70px;color: blue;text-align: center;}
 input[type="text"]	{width:65%;height:80px;border-radius:100px;background-color: orange;color: red;margin-left:2px;position:fixed;bottom: 20px;left: 123px;font-size:35px;-webkit-animation-name: spaceboots;-webkit-animation-duration: 0.8s;-webkit-transform-origin: 50% 50%;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear;}
 input[type="image"]	{width:70;height:70;position:fixed;bottom:20px;right: 123px;-webkit-animation-name: spaceboots;-webkit-animation-duration: 0.8s;-webkit-transform-origin: 50% 50%;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear;}
 time	{font-size:40px;color:red;position: absolute;right: 55px;bottom: 500px;text-shadow: 2px 2px 5px red;}
+	//shaking image starts
 @-webkit-keyframes spaceboots {
   0% {
     -webkit-transform: translate(2px, 1px) rotate(0deg);
@@ -62,6 +64,7 @@ time	{font-size:40px;color:red;position: absolute;right: 55px;bottom: 500px;text
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+	//shaking imagr ends
 </style>
 <body>
 <a href="ads_center.html"><img src="ads_poster.jpg" class="ads"></a>
@@ -89,7 +92,8 @@ time	{font-size:40px;color:red;position: absolute;right: 55px;bottom: 500px;text
 </form>
 </center>
 <script>
-var final_date=new Date("Jan 14,2021 06:00:00").getTime();
+	//count downs starts
+var final_date=new Date("Jan 14,2021 05:30:00").getTime();
 var x=setInterval(function() {
 	var now=new Date().getTime();
 	var count=final_date-now;
@@ -104,13 +108,16 @@ var x=setInterval(function() {
     document.getElementById("date").innerHTML = "கொண்டாட்டம் ஆரம்பம்";
   }
 }, 1000);
+	//count downs ends
 </script>
 <script>
+	//getting name from url starts
 var name0=decodeURIComponent(window.location.search);
 name1=name0.substring(1);
 //var name2=name1.indexOf("&x=");
 var name3=name1.slice(2);
-document.getElementById("name").innerHTML=name3+' \'s';
+document.getElementById("name").innerHTML=name3;
+	//getting name from url ends
 </script>
 <script>
 var index0=0;
